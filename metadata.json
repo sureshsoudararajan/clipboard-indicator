@@ -1,0 +1,12 @@
+{
+  "name": "Clipboard Indicator",
+  "description": "Advanced clipboard manager for GNOME. Maintains clipboard history for text, links, and images with search, pinning, and keyboard shortcuts.",
+  "uuid": "clipboard-indicator@suresh",
+  "url": "https://github.com/sureshsoudararajan/clipboard-indicator.git",
+  "shell-version": [
+    "51"
+  ],
+  "version": 1,
+  "settings-schema": "org.gnome.shell.extensions.clipboard-indicator",
+  "gettext-domain": "clipboard-indicator"
+}

@@ -1,0 +1,39 @@
+# Compiled GSettings schemas (generated via glib-compile-schemas)
+schemas/gschemas.compiled
+
+# GNOME extension build & package archives
+*.zip
+*.shell-extension.zip
+build/
+dist/
+
+# Node & JavaScript dependencies / tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Test artifacts & coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Editor & OS temporary files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.#*
+*.bak
+
+# IDE configurations
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Runtime / persistent extension user data (if tested locally)
+data/
+*.log

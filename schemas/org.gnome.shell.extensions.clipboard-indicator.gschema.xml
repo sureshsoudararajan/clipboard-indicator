@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.clipboard-indicator"
+          path="/org/gnome/shell/extensions/clipboard-indicator/"
+          gettext-domain="clipboard-indicator">
+
+    <!-- ==================== General ==================== -->
+
+    <key name="history-size" type="i">
+      <default>50</default>
+      <summary>History size</summary>
+      <description>Maximum number of clipboard history entries to maintain.</description>
+      <range min="10" max="500"/>
+    </key>
+
+    <key name="enable-monitoring" type="b">
+      <default>true</default>
+      <summary>Enable clipboard monitoring</summary>
+      <description>Whether to actively monitor the system clipboard for changes.</description>
+    </key>
+
+    <key name="close-after-copy" type="b">
+      <default>true</default>
+      <summary>Close popup after copy</summary>
+      <description>Automatically close the clipboard indicator popup menu after selecting an entry to copy.</description>
+    </key>
+
+    <key name="show-timestamps" type="b">
+      <default>true</default>
+      <summary>Show timestamps</summary>
+      <description>Display relative or absolute timestamps for each clipboard history entry.</description>
+    </key>
+
+    <key name="enable-deduplication" type="b">
+      <default>true</default>
+      <summary>Enable deduplication</summary>
+      <description>Filter out duplicate items when new clipboard contents match existing entries.</description>
+    </key>
+
+    <key name="popup-height" type="i">
+      <default>400</default>
+      <summary>Popup height</summary>
+      <description>Maximum height of the clipboard popup menu in pixels.</description>
+      <range min="200" max="800"/>
+    </key>
+
+    <!-- ==================== Appearance ==================== -->
+
+    <key name="theme-mode" type="s">
+      <default>'dark'</default>
+      <summary>Theme mode</summary>
+      <description>Color theme mode for the extension interface (dark).</description>
+    </key>
+
+    <key name="display-density" type="s">
+      <choices>
+        <choice value="compact"/>
+        <choice value="comfortable"/>
+      </choices>
+      <default>'compact'</default>
+      <summary>Display density</summary>
+      <description>Layout density of clipboard history items (compact or comfortable).</description>
+    </key>
+
+    <key name="show-indicator-label" type="b">
+      <default>false</default>
+      <summary>Show indicator label</summary>
+      <description>Show a text label next to the panel indicator icon.</description>
+    </key>
+
+    <key name="preview-lines" type="i">
+      <default>2</default>
+      <summary>Preview lines</summary>
+      <description>Number of lines to show in preview for text entries.</description>
+      <range min="1" max="5"/>
+    </key>
+
+    <!-- ==================== Keyboard Shortcuts ==================== -->
+
+    <key name="toggle-popup" type="as">
+      <default>['&lt;Super&gt;v']</default>
+      <summary>Toggle popup keybinding</summary>
+      <description>Keyboard shortcut to open or close the clipboard history popup menu.</description>
+    </key>
+
+    <key name="focus-search" type="as">
+      <default>[]</default>
+      <summary>Focus search keybinding</summary>
+      <description>Keyboard shortcut to focus the search input field in the popup menu.</description>
+    </key>
+
+    <key name="toggle-pinned" type="as">
+      <default>[]</default>
+      <summary>Toggle pinned filter keybinding</summary>
+      <description>Keyboard shortcut to filter and display pinned clipboard items only.</description>
+    </key>
+
+    <key name="clear-history" type="as">
+      <default>[]</default>
+      <summary>Clear history keybinding</summary>
+      <description>Keyboard shortcut to clear all non-pinned clipboard history entries.</description>
+    </key>
+
+    <!-- ==================== Privacy ==================== -->
+
+    <key name="enable-persistence" type="b">
+      <default>true</default>
+      <summary>Enable persistence</summary>
+      <description>Persist clipboard history across GNOME Shell and system sessions.</description>
+    </key>
+
+    <key name="retention-days" type="i">
+      <default>30</default>
+      <summary>Retention days</summary>
+      <description>Number of days to retain clipboard history entries before automatic pruning.</description>
+      <range min="1" max="365"/>
+    </key>
+
+    <key name="persist-images" type="b">
+      <default>true</default>
+      <summary>Persist images</summary>
+      <description>Persist image entries to disk along with text history.</description>
+    </key>
+
+    <key name="detect-sensitive" type="b">
+      <default>true</default>
+      <summary>Detect sensitive content</summary>
+      <description>Detect sensitive data (e.g., passwords, API keys, tokens, credit card numbers) and apply privacy protections.</description>
+    </key>
+
+    <key name="max-image-storage-mb" type="i">
+      <default>50</default>
+      <summary>Max image storage MB</summary>
+      <description>Maximum disk storage in megabytes allocated for cached clipboard images.</description>
+      <range min="10" max="500"/>
+    </key>
+
+    <key name="enable-ocr" type="b">
+      <default>false</default>
+      <summary>Enable OCR</summary>
+      <description>Enable optical character recognition to extract and index searchable text from clipboard images.</description>
+    </key>
+
+    <!-- ==================== Advanced ==================== -->
+
+    <key name="enable-collections" type="b">
+      <default>true</default>
+      <summary>Enable collections</summary>
+      <description>Enable organizing clipboard history entries into custom collections or tags.</description>
+    </key>
+
+    <key name="enable-dev-tools" type="b">
+      <default>true</default>
+      <summary>Enable developer tools</summary>
+      <description>Enable developer tools including clipboard inspector, format viewers, and debugging utilities.</description>
+    </key>
+
+    <key name="enable-similarity" type="b">
+      <default>false</default>
+      <summary>Enable similarity detection</summary>
+      <description>Enable fuzzy similarity detection between clipboard entries to detect near-duplicates.</description>
+    </key>
+
+  </schema>
+</schemalist>
